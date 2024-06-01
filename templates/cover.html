@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCHunt | Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../static/css/coverstyle.css" />
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="module" defer src="../static/js/register.js"></script>
+    <script type="module" defer src="../static/js/login.js"></script>
+    <script type="module" defer src="../static/js/forget.js"></script>
+    <script type="module" defer src="../static/js/update.js"></script>
+    <script type="module" defer src="../static/js/auth.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../static/assets/usc_logo.png"
+            height="60"
+            width="224"
+            alt="SCHunt Logo"
+            style="margin: 0.7rem"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link hero-navlink" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hero-navlink" href="#emp">Employers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hero-navlink" href="#sup">Support</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 style="font-size: 5rem">Welcome to SCHunt</h1>
+        <a
+          href="#"
+          class="btn hero-button shadow-none"
+          style="
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 14px;
+            border: 1px solid white;
+            color: #ffffff;
+            letter-spacing: 1.7px;
+          "
+          data-toggle="modal"
+          data-target="#loginModal"
+          id="loginSignupButton"
+          >START HUNTING</a
+        >
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog mt-5">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            style="background-color: #900; color: #ffffff"
+          >
+            <h5 class="modal-title" id="loginSignupModalLabel">Log In</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true" style="color: #ffffff">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="loginSignupContent">
+            <!-- Login form -->
+            <form id="loginForm" action="/" method="POST">
+              <!-- Login form fields -->
+              <div class="form-outline mb-4">
+                <label for="s_email">Enter Email Address</label>
+                <input
+                  type="email"
+                  id="s_email"
+                  class="form-control"
+                  placeholder="nataliejord@usc.edu"
+                  name="s_email"
+                  required
+                />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="s_password">Enter Password</label>
+                <input
+                  type="password"
+                  id="s_password"
+                  class="form-control"
+                  placeholder="***********"
+                  name="s_password"
+                  required
+                />
+              </div>
+
+              <button
+                id="s_submit"
+                type="submit"
+                class="btn btn-block mb-2"
+                style="background-color: #900; color: #ffffff"
+              >
+                Sign In
+              </button>
+
+              <div class="text-center">
+                <a class="text-muted" href="#!" id="forgetLink"
+                  >Forgot password?</a
+                >
+                <p>
+                  New User?
+                  <a href="#!" id="createAccountLink">Create an account</a>
+                </p>
+                <p>Or sign in with</p>
+                <button type="button" class="btn btn-floating mx-1" id="login1">
+                  <img
+                    src="../static/assets/google.png"
+                    alt="Google"
+                    width="30"
+                  />
+                </button>
+                <button type="button" class="btn btn-floating mx-1" id="login2">
+                  <img
+                    src="../static/assets/facebook.png"
+                    alt="Facebook"
+                    width="30"
+                  />
+                </button>
+                <button type="button" class="btn btn-floating mx-1" id="login3">
+                  <img
+                    src="../static/assets/microsoft.png"
+                    alt="Microsoft"
+                    width="30"
+                  />
+                </button>
+              </div>
+            </form>
+
+            <!-- Signup form (initially hidden) -->
+            <form
+              id="signupForm"
+              action="/"
+              method="POST"
+              style="display: none"
+            >
+              <!-- Signup form fields -->
+              <div class="form-outline mb-4">
+                <label for="c_name">Full Name</label>
+                <input
+                  type="text"
+                  id="c_name"
+                  class="form-control"
+                  placeholder="Natalie Jord"
+                  name="c_name"
+                  required
+                />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="c_email">Enter Email Address</label>
+                <input
+                  type="email"
+                  id="c_email"
+                  class="form-control"
+                  placeholder="nataliejord@usc.edu"
+                  name="c_email"
+                  required
+                />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label for="c_password">Create Password</label>
+                <input
+                  type="password"
+                  id="c_password"
+                  class="form-control"
+                  placeholder="***********"
+                  name="c_password"
+                  required
+                />
+              </div>
+
+              <button
+                id="c_submit"
+                type="submit"
+                class="btn btn-block mb-2"
+                style="background-color: #900; color: #ffffff"
+              >
+                Sign Up
+              </button>
+
+              <div class="text-center">
+                <a class="text-muted" href="#!" id="forgetLink2"
+                  >Forgot password?</a
+                >
+                <p>
+                  Already have an account?
+                  <a href="#!" id="signInLink">Sign in</a>
+                </p>
+                <p>Or sign up with</p>
+                <button
+                  type="button"
+                  class="btn btn-floating mx-1"
+                  id="login11"
+                >
+                  <img
+                    src="../static/assets/google.png"
+                    alt="Google"
+                    width="30"
+                  />
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-floating mx-1"
+                  id="login22"
+                >
+                  <img
+                    src="../static/assets/facebook.png"
+                    alt="Facebook"
+                    width="30"
+                  />
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-floating mx-1"
+                  id="login33"
+                >
+                  <img
+                    src="../static/assets/microsoft.png"
+                    alt="Microsoft"
+                    width="30"
+                  />
+                </button>
+              </div>
+            </form>
+
+            <form
+              id="forgetform"
+              action="/"
+              method="POST"
+              style="display: none"
+            >
+              <div class="card mx-auto" style="width: 300px">
+                <div class="card-body px-5">
+                  <p class="card-text py-2">
+                    Enter your email address and we'll send you an email with
+                    instructions to reset your password.
+                  </p>
+                  <div class="form-outline">
+                    <input
+                      type="email"
+                      id="typeEmail"
+                      class="form-control my-3"
+                    />
+                  </div>
+                  <a
+                    id="reset"
+                    href="#"
+                    class="btn w-100"
+                    style="background-color: #900; color: #ffffff"
+                    >Reset password</a
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about" style="background-color: #FFF">
+      <div class="row p-5 align-items-center">
+        <div class="col-lg-6">
+          <img
+            src="../static/assets/about_img.jpeg"
+            class="d-block mx-lg-auto img-fluid"
+            alt=""
+            width="700"
+            height="500"
+          />
+        </div>
+        <div class="col-lg-6 py-5 px-3">
+          <h1 class="main-heading">About Us</h1>
+          <p class="text-justify">
+            In response to recent studies highlighting shortcomings in existing
+            job search platforms, particularly in application management and
+            tracking, we recognize a pressing need for an innovative solution.
+            This gap poses a significant challenge, especially for students
+            navigating the competitive job market.Our mission is to address
+            these deficiencies by introducing a comprehensive job portal
+            designed to streamline the job-seeking experience and empower users
+            with valuable insights.
+            <br /><br />
+            Our proposed project aims to develop a feature-rich job portal
+            tailored to meet the needs of students and job seekers alike.
+            Through this platform, users will have the ability to efficiently
+            search for job listings, seamlessly apply for positions, and
+            effectively track the progress of their applications. Furthermore,
+            our project seeks to provide users with invaluable insights into
+            their job application data, enabling them to make informed decisions
+            and optimize their job-seeking strategies.
+            <br /><br />
+            By leveraging cutting-edge technology and innovative design
+            principles, our goal is to create a user-centric job portal that
+            revolutionizes the way individuals approach and navigate the job
+            market. Together, we envision a platform that empowers users to take
+            control of their career aspirations and achieve their professional
+            goals with confidence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="emp" style="background-color: #900; padding: 2rem 0.8rem">
+      <div style="height: 20vh"></div>
+    </section> -->
+
+    <section id="sup" style="background-color: #ffc72c; color: black">
+      <div class="container">
+        <footer class="py-5">
+          <div class="row p-3">
+            <div class="col-6 col-md-2 mb-3">
+              <h5>About</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >Features</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >Jobs</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >FAQs</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Quick Links</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >Features</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >Employers</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >FAQs</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+              <h5>Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >Features</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >Pricing</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >FAQs</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a
+                    href="#"
+                    class="nav-link p-0 text-body-secondary"
+                    style="color: #900; text-decoration: none"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-md-5 offset-md-1 mb-3">
+              <form>
+                <h5>Subscribe to our newsletter</h5>
+                <br /><br />
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <input
+                    id="newsletter1"
+                    type="text"
+                    class="form-control"
+                    placeholder="Email address"
+                  />
+                  <br />
+                  <button class="btn subscribe-button" type="button">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-between pt-4 mt-4"
+            style="border-top: 1px solid #900 !important"
+          >
+            <p>&copy; 2024 Efforts By Yashika Goyal, Deepanshu Jain and Janak Thakkar</p>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      document
+        .getElementById("createAccountLink")
+        .addEventListener("click", function () {
+          document.getElementById("loginSignupModalLabel").innerText =
+            "Create an account";
+          document.getElementById("loginForm").style.display = "none";
+          document.getElementById("signupForm").style.display = "block";
+        });
+
+      document
+        .getElementById("signInLink")
+        .addEventListener("click", function () {
+          document.getElementById("loginSignupModalLabel").innerText = "Log in";
+          document.getElementById("signupForm").style.display = "none";
+          document.getElementById("loginForm").style.display = "block";
+        });
+
+      document
+        .getElementById("forgetLink")
+        .addEventListener("click", function () {
+          document.getElementById("loginSignupModalLabel").innerText =
+            "Reset Password";
+          document.getElementById("loginForm").style.display = "none";
+          document.getElementById("forgetform").style.display = "block";
+        });
+
+      document
+        .getElementById("forgetLink2")
+        .addEventListener("click", function () {
+          document.getElementById("loginSignupModalLabel").innerText =
+            "Reset Password";
+          document.getElementById("signupForm").style.display = "none";
+          document.getElementById("forgetform").style.display = "block";
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+.filter-search-input {
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-group-text {
+    background-color: transparent;
+}
+
+.job-section{
+    padding-top: 4rem !important;
+}
+
+.job-box{
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1.5rem 0rem;
+}
+
+.job-title-style{
+    color: dodgerblue;
+}
+
+.text-justify {
+    text-align: justify !important;
+}

@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Adobe Caslon Pro";
+  src: url("https://fonts.googleapis.com/css2?family=Adobe+Caslon+Pro&display=swap");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-image: url("../assets/cover_bg.jpg") !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: "Adobe Caslon Pro";
+}
+
+.jumbotron {
+  height: 85vh;
+}
+
+.button {
+  border: none !important;
+}
+
+.main-heading {
+  font-family: "Adobe Caslon Pro";
+  font-weight: bolder;
+  color: #900;
+  font-size: 4rem;
+  padding: 1.3rem 0.8rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.input-group-text {
+  border: transparent !important;
+}
+
+.form-control {
+  border-color: transparent !important;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  outline: none !important;
+}
+
+.form-control:focus {
+  border-color: none !important;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  outline: none !important;
+}
+
+.navbar {
+  background-color: #FFCC00 !important;
+}
+
+.jumbotron {
+  height: 100vh;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(153, 0, 0, 0.85);
+  color: #FFF;
+  padding-bottom: 9rem;
+}
+
+.hero-navlink {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #900;
+  padding: auto 3rem;
+  margin: auto 0.875rem;
+}
+
+.hero-button {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.4286;
+  padding-right: 0.875rem;
+  padding-left: 0.875rem;
+  margin-top: 2rem;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.10625rem;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  width: auto;
+  min-height: 3.125rem;
+  border: 0.0625rem solid #000;
+  border-radius: 0.625rem;
+  color: #000;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline-offset: 0;
+  border-color: #FFF;
+  background-color: transparent;
+  color: #FFF;
+}
+
+.hero-button:hover {
+  border-color: #900;
+  background-color: #FFF;
+  color: #900 !important;
+}
+
+.subscribe-button {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #900;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  color: #FFF;
+}
+
+.subscribe-button:hover {
+  color: #FFF;
+}

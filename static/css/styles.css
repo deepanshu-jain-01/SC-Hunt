@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Adobe Caslon Pro";
+  src: url("https://fonts.googleapis.com/css2?family=Adobe+Caslon+Pro&display=swap");
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  background-color: #900 !important;
+  padding: 1rem;
+}
+
+.button {
+  border: none !important;
+}
+
+.input-group-text {
+  border: transparent !important;
+}
+
+.form-control {
+  border-color: transparent !important;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  outline: none !important;
+}
+
+.form-control:focus {
+  border-color: none !important;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  outline: none !important;
+}
+
+.job-box {
+  padding: 1.8rem;
+  margin: 2.2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.job-title-style {
+  font-family: Tahoma, sans-serif;
+  color: #900;
+  font-weight: 400;
+}
+
+.job-description {
+  text-align: justify;
+}
+
+.multiselect {
+  position: relative;
+  z-index: 1;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.overSelect {
+  position: absolute;
+  z-index: -1;
+}
+
+#checkboxes {
+  display: none;
+  border: none;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 100;
+}
+#checkboxes label {
+  display: block;
+  margin: 0.3rem;
+  padding: 0.2rem 1rem;
+}
+
+.main-heading {
+  font-family: "Adobe Caslon Pro";
+  font-weight: bolder;
+  color: #900;
+  font-size: 4rem;
+  padding: 1.3rem 0.8rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.filter-submit-button {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #900;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  color: #fff;
+}
+
+.filter-submit-button:hover {
+  background-color: #900;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: #fff;
+}
+
+summary::marker {
+  color: #900;
+  font-size: 1em;
+}
+
+.job-button {
+  background-color: #900;
+  box-shadow: 0px 0px 1px #000;
+  color: #fff;
+}
+
+.job-button:hover {
+  background-color: transparent;
+  border: #900 !important;
+  color: #900;
+}
+
+.apply-button {
+  background-color: #000;
+  box-shadow: 0px 0px 1px #000;
+  color: #FFF;
+}
+
+.apply-checkbox {
+  margin-right: 1rem;
+}
+
+.profile-button-div {
+  margin-right: 1rem;
+}
+
+.signout-button-div {
+  margin-left: 1rem;
+}
+
+.signout-btn {
+  background-color: #FFCC00;
+  color: #FFF;
+  border: none !important;
+  outline: #FFCC00 !important;
+  padding: 0.4rem 1.1rem !important;
+}
+
+.signout-btn a {
+  color: #fff;
+  text-decoration: none;
+}
