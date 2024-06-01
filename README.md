@@ -1,10 +1,9 @@
 <!-- PROJECT DSCI 551 -->
 <div align="center">
-  <h1 align="center">DSCI 551: FINAL PROJECT</h1>
+  <h1 align="center">SC HUNT</h1>
   <p align="center">
     This is a README File to get started with SCHunt!
     <br />
-    <a href="https://drive.google.com/drive/folders/1BG7-jGPaXuaqTjwFpV0G9zAXX4kT56Ua?usp=sharing"><strong>Drive Link »</strong></a>
     <a href="https://youtu.be/lerT5BfSq5Y"><strong>Youtube Link »</strong></a>
   </p>
 </div>
@@ -79,6 +78,6 @@ _For windows users, these are the instructions on setting up the project on your
 <!-- CONTACT -->
 ## Contact
 
-Yashika Goyal - yashikag@usc.edu <br>
 Deepanshu Jain - jaind@usc.edu <br>
+Yashika Goyal - yashikag@usc.edu <br>
 Janak Tarun Thakkar - janakt@usc.edu <br>
